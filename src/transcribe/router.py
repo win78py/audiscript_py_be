@@ -8,7 +8,7 @@ class TranscribeRequest(BaseModel):
 
 router = APIRouter()
 
-@router.post("/")
+@router.post("")
 async def transcribe(req: TranscribeRequest):
     try:
         text = transcribe_from_url(req.file_url)
