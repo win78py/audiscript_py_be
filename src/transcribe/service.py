@@ -1,6 +1,8 @@
-from src.transcribe.utils import download_temp_audio
-import whisper
 import os
+os.environ["XDG_CACHE_HOME"] = "/tmp"
+
+import whisper
+from src.transcribe.utils import download_temp_audio
 
 model = whisper.load_model("tiny")
 def transcribe_from_url(audio_url: str) -> str:
